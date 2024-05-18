@@ -1,38 +1,61 @@
+body, html {
+  height: 100%;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+header {
+  background-color: #f8b400;
 }
 
-@keyframes App-logo-spin {
+footer {
+  background-color: #343a40;
+}
+
+.form-control {
+  border-radius: 25px;
+}
+
+.btn-primary {
+  background-color: #f8b400;
+  border-color: #f8b400;
+}
+
+.btn-primary:hover {
+  background-color: #ffc107;
+  border-color: #ffc107;
+}
+
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
   }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+header h1 {
+  animation: fadeIn 1s ease-in-out;
+}
+
+header p {
+  animation: slideIn 1s ease-in-out;
+}
+
+form {
+  animation: slideIn 1s ease-in-out;
 }
